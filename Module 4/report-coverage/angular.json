@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "basic-service-app": {
+    "report-coverage-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,16 +56,19 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "basic-service-app:build:production"
+              "buildTarget": "report-coverage-app:build:production"
             },
             "development": {
-              "buildTarget": "basic-service-app:build:development"
+              "buildTarget": "report-coverage-app:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
         "test": {
-          "builder": "@angular/build:unit-test"
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "runnerConfig": true
+          }
         }
       }
     }
