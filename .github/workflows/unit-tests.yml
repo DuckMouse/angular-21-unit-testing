@@ -1,18 +1,34 @@
 name: Angular CI
-on: [pull_request]
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    
+    # This sets the folder for all 'run' commands in this job
+    defaults:
+      run:
+        working-directory: "Module 4/report-coverage"
+
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4   
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          # We must tell the cacher where the package-lock.json is
           cache: 'npm'
-      - name: Install Dependencies
+          cache-dependency-path: "Module 4/report-coverage/package-lock.json"
+
+      - name: Install dependencies
         run: npm ci
-      - name: Run Tests with Coverage
-        run: npx vitest run --coverage
+
+      - name: Run Vitest tests
+        run: npm test --test-coverage --run
