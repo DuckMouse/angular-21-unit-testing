@@ -9,6 +9,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required to push to the gh-pages branch
+      pull-requests: write # Required if you're using the PR coverage comment
     
     # This sets the folder for all 'run' commands in this job
     defaults:
