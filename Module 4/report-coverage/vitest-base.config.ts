@@ -23,7 +23,7 @@ export default defineConfig({
         functions: 80,  // Minimum percentage of functions
         lines: 80,      // Minimum percentage of lines
       },
-
+      reportsDirectory: './coverage'
     },
 
   },
