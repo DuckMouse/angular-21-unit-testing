@@ -20,7 +20,7 @@ export interface WeatherData {
 @Injectable({ providedIn: 'root' })
 export class WeatherService {
   private http = inject(HttpClient);
-  private apiKey = 'xxxx'; // Insert your API key here
+  private apiKey = 'cc3287a55ab446af89705219252912'; // Insert your API key here
   private baseUrl = 'https://api.weatherapi.com/v1/current.json';
 
   getWeather(city: string): Observable<WeatherData> {
@@ -29,7 +29,6 @@ export class WeatherService {
         name: res.location.name,
         temp: res.current.temp_c
       }))
-    )
-      ;
+    );
   }
 }

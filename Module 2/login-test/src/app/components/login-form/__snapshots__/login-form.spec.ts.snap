@@ -2,41 +2,59 @@
 
 exports[`LoginFormComponent > should be matching the snapshot 1`] = `
 <div
+  _nghost-a-c3225640728=""
   id="root3"
   ng-version="21.0.8"
 >
   <form
+    _ngcontent-a-c3225640728=""
     class="ng-untouched ng-pristine ng-valid"
     novalidate=""
   >
-    <div>
-      <label
-        for="username"
+    <div
+      _ngcontent-a-c3225640728=""
+      class="form-container"
+    >
+      <div
+        _ngcontent-a-c3225640728=""
+        class="form-input"
       >
-        Username:
-      </label>
-      <input
-        class="ng-untouched ng-pristine ng-valid"
-        id="username"
-        name="username"
-        type="text"
-      />
-    </div>
-    <div>
-      <label
-        for="password"
+        <label
+          _ngcontent-a-c3225640728=""
+          for="username"
+        >
+          Username:
+        </label>
+        <input
+          _ngcontent-a-c3225640728=""
+          class="ng-untouched ng-pristine ng-valid"
+          id="username"
+          name="username"
+          type="text"
+        />
+      </div>
+      <div
+        _ngcontent-a-c3225640728=""
+        class="form-input"
       >
-        Password:
-      </label>
-      <input
-        class="ng-untouched ng-pristine ng-valid"
-        id="password"
-        name="password"
-        type="password"
-      />
+        <label
+          _ngcontent-a-c3225640728=""
+          for="password"
+        >
+          Password:
+        </label>
+        <input
+          _ngcontent-a-c3225640728=""
+          class="ng-untouched ng-pristine ng-valid"
+          id="password"
+          name="password"
+          type="password"
+        />
+      </div>
     </div>
     <!--container-->
     <button
+      _ngcontent-a-c3225640728=""
       type="submit"
     >
       Log In

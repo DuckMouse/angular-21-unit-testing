@@ -1,16 +1,16 @@
-import { Component, Output, EventEmitter, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common'; // Required for ngIf/ngClass
 
 @Component({
   selector: 'app-login-form',
-  standalone: true, // Assuming standalone for modern Angular
+  standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './login-form.html',
   styleUrls: ['./login-form.css'],
 })
 export class LoginFormComponent {
-  // Use Signals for state management (Angular 17+)
+
   username = signal('');
   password = signal('');
   error = signal('');
